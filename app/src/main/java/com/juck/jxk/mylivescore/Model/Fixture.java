@@ -6,6 +6,9 @@ package com.juck.jxk.mylivescore.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 public class Fixture {
+    @SerializedName("_links")
+    @Expose
+    private Links links;
     @SerializedName("date")
     @Expose
     private String date;
@@ -24,6 +27,14 @@ public class Fixture {
     @SerializedName("result")
     @Expose
     private Result result;
+
+    public Links getLinks() {
+        return links;
+    }
+
+    public void setLinks(Links links) {
+        this.links = links;
+    }
 
     public String getDate() {
         return date;
