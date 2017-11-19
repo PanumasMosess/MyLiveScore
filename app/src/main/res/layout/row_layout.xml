@@ -19,11 +19,11 @@
     <TextView
         android:id="@+id/texthomeTeamName"
         android:layout_width="100dp"
-        android:gravity="center"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textStatus"
-        android:layout_marginEnd="19dp"
-        android:layout_toStartOf="@+id/textawayTeamName"
+        android:layout_alignBaseline="@+id/textawayTeamName"
+        android:layout_alignBottom="@+id/textawayTeamName"
+        android:layout_toEndOf="@+id/textStatus"
+        android:gravity="center"
         android:text="HomeName"
         android:textStyle="bold" />
 
@@ -41,9 +41,9 @@
         android:id="@+id/textHomeTeamGoal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/texthomeTeamName"
         android:layout_below="@+id/textStatus"
-        android:layout_marginStart="13dp"
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@+id/textStatus"
         android:text="GoalHome"
         android:textColor="#f50505"
         android:textStyle="bold" />
@@ -52,13 +52,21 @@
         android:id="@+id/textAwayTeamGoal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textHomeTeamGoal"
-        android:layout_alignBottom="@+id/textHomeTeamGoal"
-        android:layout_marginStart="16dp"
-        android:layout_toEndOf="@+id/texthomeTeamName"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginEnd="13dp"
         android:text="GoalAway"
         android:textColor="#f50505"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textHomeTeamGoal"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/textawayTeamName"
+        android:text="VS" />
 
 
 </RelativeLayout>

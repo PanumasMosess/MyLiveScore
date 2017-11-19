@@ -8,10 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.juck.jxk.mylivescore.Model.Fixture;
-
-import java.sql.Time;
 import java.util.List;
 
 /**
