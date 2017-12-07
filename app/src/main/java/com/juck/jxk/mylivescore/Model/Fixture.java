@@ -27,6 +27,17 @@ public class Fixture {
     @SerializedName("result")
     @Expose
     private Result result;
+    @SerializedName("odds")
+    @Expose
+    private String odds;
+
+    public String getOdds() {
+        return odds;
+    }
+
+    public void setOdds(String odds) {
+        this.odds = odds;
+    }
 
     public Links getLinks() {
         return links;

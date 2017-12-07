@@ -10,19 +10,21 @@
         android:id="@+id/textStatus"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/relativeLayout"
+        android:layout_alignBottom="@+id/relativeLayout"
         android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
         android:gravity="center"
         android:text="Status"
         android:textColor="#05f651"
-        android:textSize="16dp"
+        android:textSize="15dp"
         android:textStyle="bold" />
 
     <RelativeLayout
         android:layout_width="290dp"
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:id="@+id/relativeLayout">
 
         <TextView
             android:id="@+id/texthomeTeamName"
@@ -75,5 +77,17 @@
             android:layout_centerHorizontal="true"
             android:text="VS" />
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textOdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textStatus"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:textColor="#fb0404"
+        android:text="Odd" />
 
 </RelativeLayout>

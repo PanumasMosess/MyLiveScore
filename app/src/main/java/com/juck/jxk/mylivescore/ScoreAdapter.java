@@ -62,8 +62,9 @@ public class ScoreAdapter  extends ArrayAdapter<Fixture> {
 
         vh.textViewHomeName.setText(item.getHomeTeamName());
         vh.textViewAwayName.setText(item.getAwayTeamName());
-        vh.textViewGoalHome.setText(String.valueOf(item.getResult().getGoalsHomeTeam()));
-        vh.textViewGoalAway.setText(String.valueOf(item.getResult().getGoalsAwayTeam()));
+        vh.textViewGoalHome.setText( "Home    "+ String.valueOf(item.getResult().getGoalsHomeTeam()));
+        vh.textViewGoalAway.setText( String.valueOf(item.getResult().getGoalsAwayTeam())+"    Away" );
+        vh.textOdd.setText(String.valueOf(item.getOdds()));
 
         return vh.rootView;
     }
@@ -74,14 +75,17 @@ public class ScoreAdapter  extends ArrayAdapter<Fixture> {
         public final TextView textViewAwayName;
         public final TextView textViewGoalHome;
         public final TextView textViewGoalAway;
+        public final TextView textOdd;
 
-        private ViewHolder(RelativeLayout rootView, TextView textViewName,TextView textViewHomeName,TextView textViewAwayName,TextView textViewGoalHome,TextView textViewGoalAway) {
+        private ViewHolder(RelativeLayout rootView, TextView textViewName,TextView textViewHomeName,TextView textViewAwayName,TextView textViewGoalHome,TextView textViewGoalAway, TextView textOdd) {
             this.rootView = rootView;
             this.textViewName = textViewName;
             this.textViewHomeName = textViewHomeName;
             this.textViewAwayName = textViewAwayName;
             this.textViewGoalHome = textViewGoalHome;
             this.textViewGoalAway = textViewGoalAway;
+            this.textOdd = textOdd;
+
         }
 
         public static ViewHolder create(RelativeLayout rootView) {
@@ -90,7 +94,8 @@ public class ScoreAdapter  extends ArrayAdapter<Fixture> {
             TextView textViewAwayName = (TextView)rootView.findViewById(R.id.textawayTeamName);
             TextView textViewGoalHome = (TextView)rootView.findViewById(R.id.textHomeTeamGoal);
             TextView textViewGoalAway =   (TextView)rootView.findViewById(R.id.textAwayTeamGoal);
-            return new ViewHolder(rootView,textViewName,textViewHomeName,textViewAwayName,textViewGoalHome,textViewGoalAway);
+            TextView textOdd = (TextView)rootView.findViewById(R.id.textOdd);
+            return new ViewHolder(rootView,textViewName,textViewHomeName,textViewAwayName,textViewGoalHome,textViewGoalAway,textOdd);
         }
     }
 }
